@@ -18,7 +18,7 @@ class Gpac <Formula
   def install
     ENV.deparallelize
     system "chmod","+x","configure"
-    system "./configure","--disable-wx","--use-ffmpeg=no"
+    system "./configure","--disable-wx","--use-ffmpeg=no","--prefix=#{prefix}","--mandir=#{man}"
     system "make"
     system "make install"
   end
